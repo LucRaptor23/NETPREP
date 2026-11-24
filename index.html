@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- UNIDAD 1: el viewport hace que la página se adapte al ancho del celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aprende ciberseguridad: Blue Team y Red Team | NetPrep</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <!-- UNIDAD 4: Material Design (iconos Material Symbols) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  <!-- Nuestros estilos van DESPUÉS de los frameworks para poder ajustarlos -->
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/botones.css"> <!-- botones y etiquetas (LESS) -->
+  <link rel="stylesheet" href="css/style.css">   <!-- el resto de estilos (SASS) -->
+  <script>document.documentElement.className += " js";</script>
+</head>
+<body>
+
+<header class="header">
+  <nav class="contenedor barra-nav">
+    <a href="index.html" class="logo">
+      <img class="logo-img" src="img/logo.png" alt="" width="92" height="92">
+      <span>Net<b>Prep</b></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+    <div class="menu" id="menu"><a href="index.html#nivel" class="destacado">Conoce tu nivel</a><a href="cursos.html">Cursos</a><a href="ruta.html">Ruta de estudio</a><a href="certificaciones.html">Certificaciones</a><a href="laboratorios.html">Laboratorios</a><a href="contacto.html">Contacto</a></div>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="contenedor hero-grid">
+    <div class="hero-texto">
+      <span class="etiqueta">Ciberseguridad práctica</span>
+      <h1>De cero a <span class="degradado">SOC o Red Team</span> con una ruta clara</h1>
+      <p>Aprende redes, defensa y ataque ético con laboratorios guiados. Haz el test y te decimos por dónde empezar.</p>
+      <div class="botones"><a href="#nivel" class="boton">Conoce tu nivel</a><a href="cursos.html" class="boton boton-ghost">Ver cursos</a></div>
+      <ul class="mini-datos"><li><strong>12</strong>cursos</li><li><strong>3</strong>rutas</li><li><strong>40+</strong>laboratorios</li></ul>
+    </div>
+    <figure class="hero-foto"><div class="foto" role="img" aria-label="Pantalla con código"></div>
+      <img class="sello" src="img/logo.png" alt="" width="150" height="150"><figcaption>Laboratorios guiados: cada ruta termina con un proyecto real.</figcaption></figure>
+  </div>
+</section>
+
+<section id="nivel">
+  <div class="contenedor">
+    <div class="titulo-seccion"><span class="etiqueta">Test rápido · 2 minutos</span><h2>Conoce tu nivel</h2><p>Responde preguntas de redes, Nmap, Linux y seguridad. Al final te mostramos tu ruta y por dónde empezar.</p></div>
+    <div class="panel quiz revela" id="quiz">
+      <div id="quizCuerpo">
+        <div class="quiz-top"><span id="quizPaso">Pregunta 1</span><div class="barra-progreso"><i id="quizBarra"></i></div></div>
+        <h3 id="quizPregunta"></h3>
+        <div class="opciones" id="quizOpciones"></div>
+      </div>
+      <div id="quizResultado" hidden></div>
+    </div>
+  </div>
+</section>
+
+<section class="franja" id="vocacion">
+  <div class="contenedor">
+    <div class="titulo-seccion"><span class="etiqueta">Test vocacional · 2 minutos</span><h2>¿Blue Team o Red Team?</h2><p>Ya sabes tu nivel. Ahora descubre qué camino va más contigo: defender o atacar. No hay respuestas correctas.</p></div>
+    <div class="panel quiz revela" id="vocQuiz">
+      <div id="vocInicio"><h3>8 preguntas sobre cómo piensas y qué disfrutas</h3><p class="intro-test">Al final verás tu perfil, qué porcentaje tienes de Blue y de Red, y tu primer curso con las certificaciones a las que apuntas.</p><button class="boton" id="vocEmpezar">Empezar test vocacional</button></div>
+      <div id="vocCuerpo" hidden>
+        <div class="quiz-top"><span id="vocPaso">Pregunta 1</span><div class="barra-progreso"><i id="vocBarra"></i></div></div>
+        <h3 id="vocPregunta"></h3>
+        <div class="opciones" id="vocOpciones"></div>
+      </div>
+      <div id="vocResultado" hidden></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="contenedor">
+    <div class="titulo-seccion"><h2>Elige tu camino</h2><p>Empieza por los fundamentos y luego decide si quieres defender o atacar.</p></div>
+    <div class="grid-3"><a href="cursos.html#fundamentos" class="panel track t-base revela">
+  <div class="foto-track"></div><span class="material-symbols-outlined icono">school</span><h3>Fundamentos para Ciberseguridad</h3><p>La base antes de elegir camino: redes, Linux, seguridad y herramientas esenciales.</p>
+  <ul class="chips"><li>Fundamentos de redes</li><li>Linux para ciberseguridad</li><li>Fundamentos de ciberseguridad</li><li>Nmap y Wireshark</li></ul><span class="mas">Ver cursos →</span></a><a href="cursos.html#blue" class="panel track t-blue revela">
+  <div class="foto-track"></div><span class="material-symbols-outlined icono">shield</span><h3>Blue Team</h3><p>Defiende: monitorea, detecta y responde a ataques desde un SOC.</p>
+  <ul class="chips"><li>Fundamentos de Blue Team</li><li>SOC Nivel 1</li><li>SOC Nivel 2</li><li>SOC Nivel 3</li></ul><span class="mas">Ver cursos →</span></a><a href="cursos.html#red" class="panel track t-red revela">
+  <div class="foto-track"></div><span class="material-symbols-outlined icono">bug_report</span><h3>Red Team</h3><p>Ataca con ética: encuentra fallos antes que los delincuentes.</p>
+  <ul class="chips"><li>Fundamentos de Red Team</li><li>Pentesting Web</li><li>Pentesting de Infraestructura</li><li>Active Directory</li></ul><span class="mas">Ver cursos →</span></a></div>
+  </div>
+</section>
+
+<section class="franja">
+  <div class="contenedor">
+    <div class="titulo-seccion"><h2>Certificaciones a las que te orientamos</h2><p>Cada curso indica para qué examen te prepara. El examen se rinde con cada proveedor.</p></div>
+    <div class="galeria-cert">
+      <a class="insignia destacada revela" href="certificaciones.html#ejpt"><img src="img/certs/ejpt.png" alt="Insignia eJPT" width="300" height="300"><span>eJPT · tu primer paso en pentesting</span></a>
+      <a class="insignia revela" href="certificaciones.html#ccna"><img src="img/certs/ccna.jpg" alt="Insignia Cisco CCNA" width="150" height="150"><span>Cisco CCNA</span></a>
+      <a class="insignia revela" href="certificaciones.html#security"><img src="img/certs/security.png" alt="Insignia CompTIA Security+" width="150" height="150"><span>CompTIA Security+</span></a>
+      <a class="insignia revela" href="certificaciones.html#cyberops"><img src="img/certs/cyberops.jpg" alt="Insignia Cisco CyberOps" width="150" height="150"><span>Cisco CyberOps</span></a>
+      <a class="insignia revela" href="certificaciones.html#btl1"><img src="img/certs/btl1.png" alt="Insignia BTL1" width="150" height="150"><span>BTL1</span></a>
+      <a class="insignia revela" href="certificaciones.html#cysa"><img src="img/certs/cysa.png" alt="Insignia CompTIA CySA+" width="150" height="150"><span>CompTIA CySA+</span></a>
+      <a class="insignia revela" href="certificaciones.html#ewptx"><img src="img/certs/ewptx.png" alt="Insignia eWPTX" width="150" height="150"><span>eWPTX</span></a>
+      <a class="insignia revela" href="certificaciones.html#ecppt"><img src="img/certs/ecppt.jpg" alt="Insignia eCPPT" width="150" height="150"><span>eCPPT</span></a>
+      <a class="insignia revela" href="certificaciones.html#oscp"><img src="img/certs/oscp.png" alt="Insignia OSCP" width="150" height="150"><span>OSCP</span></a></div>
+    <div class="botones"><a href="certificaciones.html" class="boton">Ver todas las certificaciones</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="contenedor video-bloque t-base">
+    <div class="revela">
+      <h2>Mira cómo es una clase</h2>
+      <p>Clases cortas, ejemplos en pantalla y laboratorio al final. El video se adapta a cualquier pantalla.</p>
+      <ul class="lista-check"><li>Clases de 10 a 15 minutos</li><li>Laboratorios en máquinas virtuales propias</li><li>Simulacros al final de cada ruta</li></ul>
+    </div>
+    <div class="video revela"><video controls preload="none"><source src="clase.mp4" type="video/mp4">Tu navegador no soporta video.</video></div>
+  </div>
+</section>
+
+<section>
+  <div class="contenedor">
+    <div class="panel numeros revela"><div><strong>12</strong><span>cursos</span></div><div><strong>3</strong><span>rutas</span></div><div><strong>40+</strong><span>laboratorios</span></div><div><strong>9</strong><span>preguntas para conocer tu nivel</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="contenedor"><div class="panel cta-caja revela"><h2>¿Listo para empezar?</h2><p>Haz el test y recibe tu ruta personalizada.</p><a href="#nivel" class="boton boton-claro">Conoce tu nivel</a></div></div>
+</section>
+</main>
+
+<footer class="pie-pagina">
+  <div class="contenedor">
+    <div class="cols">
+      <div><img class="logo-pie" src="img/logo.png" alt="NetPrep" width="140" height="140"><h4>NetPrep</h4><p>Preparación práctica en ciberseguridad: de los fundamentos al SOC o al Red Team.</p></div>
+      <div><h4>Rutas</h4><a href="cursos.html#fundamentos">Fundamentos</a><a href="cursos.html#blue">Blue Team</a><a href="cursos.html#red">Red Team</a></div>
+      <div><h4>Páginas</h4><a href="index.html#nivel">Conoce tu nivel</a><a href="cursos.html">Cursos</a><a href="ruta.html">Ruta de estudio</a><a href="certificaciones.html">Certificaciones</a><a href="laboratorios.html">Laboratorios</a><a href="contacto.html">Contacto</a></div>
+      <div><h4>Empieza</h4><a href="index.html#nivel">Conoce tu nivel</a><a href="contacto.html">Habla con un asesor</a></div>
+    </div>
+    <p class="legal">© 2026 NetPrep · Proyecto académico de Hojas de Estilo en Cascada Avanzado. Cursos, ejemplos y datos son ficticios. Todas las prácticas se hacen en laboratorios propios y con autorización. Las insignias de certificaciones pertenecen a sus respectivos dueños. eJPT, eCPPT y eWPTX (INE), OSCP (OffSec), CCNA y CyberOps (Cisco), Security+ y CySA+ (CompTIA), BTL1 (Security Blue Team), GCIH y GCFA (GIAC), LPI Linux Essentials (LPI), Nmap, Wireshark, Burp Suite, Metasploit, Bootstrap, Tailwind CSS y Materialize son marcas de sus dueños; este proyecto no está afiliado a ellas.</p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/quiz.js"></script><script src="js/vocacional.js"></script>
+</body>
+</html>

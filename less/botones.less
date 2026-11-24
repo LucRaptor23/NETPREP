@@ -1,0 +1,69 @@
+// =====================================================
+//  NetPrep — botones y etiquetas con LESS (.less)
+//  UNIDAD 2: variables (@), mixins con parámetros,
+//  anidación (&), operaciones y funciones de color.
+//  Colores: blanco y negro, igual que el logo.
+// =====================================================
+
+// ----- Variables -----
+@negro: #0b0b0c;
+@blanco: #ffffff;
+@gris: #5f5f66;
+@gris-claro: #d4d4d8;
+@borde: rgba(11, 11, 12, .28);
+@espacio: 12px;
+
+// ----- Mixin 1: una "receta" de botón -----
+// Recibe el color de fondo y el color del texto.
+.crear-boton(@fondo-btn, @color) {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: @espacio (@espacio * 2);        // 12px arriba/abajo, 24px a los lados
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: @fondo-btn;
+  color: @color;
+  font-family: inherit;
+  font-size: .92rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  cursor: pointer;
+  -webkit-transition: transform .25s ease, background .25s ease, border-color .25s ease;
+  transition: transform .25s ease, background .25s ease, border-color .25s ease;
+  &:hover { -webkit-transform: translateY(-2px); transform: translateY(-2px); }
+  &:active { -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
+// ----- Los botones que usamos en las páginas -----
+// lighten() y darken() son funciones de LESS: aclaran u oscurecen un color
+.boton { .crear-boton(@negro, @blanco); &:hover { background: lighten(@negro, 22%); } }
+.boton-ghost { .crear-boton(transparent, @negro); border-color: @borde; &:hover { border-color: @negro; background: transparent; } }
+.boton-claro { .crear-boton(@blanco, @negro); &:hover { background: darken(@blanco, 14%); } }
+.boton-sm { padding: (@espacio / 2) (@espacio * 1.5); font-size: .85rem; }
+
+// ----- Etiqueta (usa el gris de la ruta si existe: var(--c)) -----
+.etiqueta {
+  display: inline-block;
+  color: var(--c, @negro);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+// ----- Mixin 2: pastillas de nivel (se usan en certificaciones.html) -----
+.pastilla(@fondo-p, @color-p, @borde-p) {
+  display: inline-block;
+  padding: 2px @espacio;
+  border: 1px solid @borde-p;
+  border-radius: 999px;
+  background: @fondo-p;
+  color: @color-p;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+}
+.nivel-inicial { .pastilla(transparent, @negro, @negro); }
+.nivel-intermedio { .pastilla(@gris-claro, @negro, @gris-claro); }
+.nivel-avanzado { .pastilla(@negro, @blanco, @negro); }

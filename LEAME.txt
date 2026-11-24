@@ -1,0 +1,38 @@
+NetPrep - páginas: index, cursos, ruta, certificaciones, laboratorios, contacto (.html)
+Paleta en blanco y negro como el logo del dragón; los iconos llevan color por ruta (verde azulado, azul y rojo).
+
+COMPILAR LOS ESTILOS (instalar una vez: npm i -g sass less):
+  sass scss/style.scss css/style.css
+  lessc less/botones.less css/botones.css
+
+Test "Conoce tu nivel": js/quiz.js (preguntas y rutas al inicio del archivo).
+Fotos/videos: el video de la portada es clase.mp4 (misma carpeta que index.html).
+Insignias de certificaciones: img/certs/ (imágenes de las certificaciones; para cambiarlas,
+reemplaza el archivo con el mismo nombre o cambia la ruta en el HTML).
+Abrir con internet: se cargan las fuentes, los iconos Material, Bootstrap (contacto.html),
+Tailwind (laboratorios.html) y Materialize (certificaciones.html).
+
+DÓNDE SE CUMPLE CADA UNIDAD DEL SÍLABO
+UNIDAD 1 - Diseño responsivo
+  - viewport: <meta name="viewport"> en todas las páginas
+  - media queries: variables $tablet y $pc en scss/style.scss (@media (min-width: ...))
+  - multimedia responsiva: img/video con max-width, aspect-ratio y el video de index.html
+  - texto responsivo: clamp() en h1/h2 y medidas en rem
+  - flexbox: .barra-nav, .botones, .certs, .cadena, .pagina-certs .row
+  - grid: .grid-3, .grid-cursos, .galeria-cert, .hero-grid
+    (grid-template-areas + grid-area en el hero; grid-column y grid-row en .insignia.destacada)
+UNIDAD 2 - SASS y LESS
+  - SASS (scss/style.scss): variables, mapa + @each, @function, @mixin con @content,
+    anidación con &, operaciones (16px * 5)
+  - LESS (less/botones.less): variables @, mixins con parámetros, anidación, operaciones,
+    funciones lighten() y darken()
+UNIDAD 3 - Animaciones CSS
+  - transiciones: mixin movimiento() (hover de botones, tarjetas, insignias, logo)
+  - transformaciones: translate, rotate y scale con el mixin mover()
+  - animaciones: @keyframes subir (aparecer al hacer scroll) y flotar (logo del inicio)
+  - compatibilidad: prefijos -webkit-, @supports (backdrop-filter) y prefers-reduced-motion
+UNIDAD 4 - Frameworks
+  - Bootstrap: contacto.html (grilla row/col y formulario)
+  - Tailwind CSS: laboratorios.html (clases de utilidad: grid, p-6, hover:...)
+  - Materialize: certificaciones.html (grilla row/col, card y chip)
+  - Material Design: iconos Material Symbols en todas las páginas + tarjetas de Materialize

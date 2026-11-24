@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- UNIDAD 1: el viewport hace que la página se adapte al ancho del celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Certificaciones | NetPrep</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <!-- UNIDAD 4: Material Design (iconos Material Symbols) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  <!-- UNIDAD 4: Materialize (esta página usa su grilla row/col y sus tarjetas card y chip) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Nuestros estilos van DESPUÉS de los frameworks para poder ajustarlos -->
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/botones.css"> <!-- botones y etiquetas (LESS) -->
+  <link rel="stylesheet" href="css/style.css">   <!-- el resto de estilos (SASS) -->
+  <script>document.documentElement.className += " js";</script>
+</head>
+<body>
+
+<header class="header">
+  <nav class="contenedor barra-nav">
+    <a href="index.html" class="logo">
+      <img class="logo-img" src="img/logo.png" alt="" width="92" height="92">
+      <span>Net<b>Prep</b></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+    <div class="menu" id="menu"><a href="index.html#nivel" class="destacado">Conoce tu nivel</a><a href="cursos.html">Cursos</a><a href="ruta.html">Ruta de estudio</a><a href="certificaciones.html" class="activo">Certificaciones</a><a href="laboratorios.html">Laboratorios</a><a href="contacto.html">Contacto</a></div>
+  </nav>
+</header>
+
+<main>
+<section class="cabecera-pagina"><div class="contenedor"><h1>Certificaciones</h1><p>Doce certificaciones hacia las que te orientan nuestros cursos. La forma de la insignia indica la ruta: círculo, Fundamentos; escudo, Blue Team; hexágono, Red Team.</p></div></section>
+<section class="pagina-certs"><div class="contenedor">
+  <!-- row, col s12 m6 l4, card, card-content y chip son clases de Materialize: 1 columna en celular, 2 en tablet y 3 en PC -->
+  <div class="row">
+      <div class="col s12 m6 l4">
+        <div class="card hoverable revela t-red" id="ejpt">
+          <div class="card-content">
+            <img class="insignia-card" src="img/certs/ejpt.png" alt="Insignia eJPT" width="150" height="150">
+            <span class="card-title">eJPT</span>
+            <p class="proveedor">INE</p>
+            <p>Primer examen práctico de pentesting para empezar en el equipo rojo.</p>
+            <div><span class="nivel-intermedio">Intermedio</span> <span class="chip">Red Team</span></div>
+            <a class="ver-curso" href="cursos.html#rt-fund">Curso: Fundamentos de Red Team →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card hoverable revela t-red" id="ewptx">
+          <div class="card-content">
+            <img class="insignia-card" src="img/certs/ewptx.png" alt="Insignia eWPT / eWPTX" width="150" height="150">
+            <span class="card-title">eWPT / eWPTX</span>
+            <p class="proveedor">INE</p>
+            <p>Pruebas de seguridad en aplicaciones web, de nivel intermedio a extremo.</p>
+            <div><span class="nivel-intermedio">Intermedio</span> <span class="chip">Red Team</span></div>
+            <a class="ver-curso" href="cursos.html#web">Curso: Pentesting Web →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card hoverable revela t-red" id="ecppt">
+          <div class="card-content">
+            <img class="insignia-card" src="img/certs/ecppt.jpg" alt="Insignia eCPPT" width="150" height="150">
+            <span class="card-title">eCPPT</span>
+            <p class="proveedor">INE</p>
+            <p>Pentesting profesional de redes e infraestructura.</p>
+            <div><span class="nivel-avanzado">Avanzado</span> <span class="chip">Red Team</span></div>
+            <a class="ver-curso" href="cursos.html#infra">Curso: Pentesting de Infraestructura →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card hoverable revela t-red" id="oscp">
+          <div class="card-content">
+            <img class="insignia-card" src="img/certs/oscp.png" alt="Insignia OSCP" width="150" height="150">
+            <span class="card-title">OSCP</span>
+            <p class="proveedor">OffSec</p>
+            <p>Examen práctico de pentesting, el más conocido del Red Team.</p>
+            <div><span class="nivel-avanzado">Avanzado</span> <span class="chip">Red Team</span></div>
+            <a class="ver-curso" href="cursos.html#ad">Curso: Active Directory →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card hoverable revela t-base" id="ccna">
+          <div class="card-content">
+            <img class="insignia-card" src="img/certs/ccna.jpg" alt="Insignia Cisco CCNA" width="150" height="150">
+            <span class="card-title">Cisco CCNA</span>
+            <p class="proveedor">Cisco</p>
+            <p>Redes: direccionamiento IP, routing y switching.</p>
+            <div><span class="nivel-inicial">Inicial</span> <span class="chip">Fundamentos</span></div>
+            <a class="ver-curso" href="cursos.html#redes">Curso: Fundamentos de redes →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card hoverable revela t-base" id="security">
+          <div class="card-content">
+            <img class="insignia-card" src="img/certs/security.png" alt="Insignia CompTIA Security+" width="150" height="150">
+            <span class="card-title">CompTIA Security+</span>
+            <p class="proveedor">CompTIA</p>
+            <p>Base de seguridad: amenazas, criptografía y buenas prácticas.</p>
+            <div><span class="nivel-inicial">Inicial</span> <span class="chip">Fundamentos</span></div>
+            <a class="ver-curso" href="cursos.html#ciber">Curso: Fundamentos de ciberseguridad →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card hoverable revela t-base" id="lpi">
+          <div class="card-content">
+            <img class="insignia-card" src="img/certs/lpi.png" alt="Insignia LPI Linux Essentials" width="150" height="150">
+            <span class="card-title">LPI Linux Essentials</span>
+            <p class="proveedor">LPI</p>
+            <p>Linux desde cero: terminal, usuarios y permisos.</p>
+            <div><span class="nivel-inicial">Inicial</span> <span class="chip">Fundamentos</span></div>
+            <a class="ver-curso" href="cursos.html#linux">Curso: Linux para ciberseguridad →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card hoverable revela t-blue" id="cyberops">
+          <div class="card-content">
+            <img class="insignia-card" src="img/certs/cyberops.jpg" alt="Insignia Cisco CyberOps" width="150" height="150">
+            <span class="card-title">Cisco CyberOps</span>
+            <p class="proveedor">Cisco</p>
+            <p>Operaciones de seguridad y monitoreo dentro de un SOC.</p>
+            <div><span class="nivel-intermedio">Intermedio</span> <span class="chip">Blue Team</span></div>
+            <a class="ver-curso" href="cursos.html#soc1">Curso: SOC Nivel 1 →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card hoverable revela t-blue" id="btl1">
+          <div class="card-content">
+            <img class="insignia-card" src="img/certs/btl1.png" alt="Insignia BTL1" width="150" height="150">
+            <span class="card-title">BTL1</span>
+            <p class="proveedor">Security Blue Team</p>
+            <p>Análisis y respuesta a incidentes para analistas de nivel 1.</p>
+            <div><span class="nivel-intermedio">Intermedio</span> <span class="chip">Blue Team</span></div>
+            <a class="ver-curso" href="cursos.html#soc1">Curso: SOC Nivel 1 →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card hoverable revela t-blue" id="cysa">
+          <div class="card-content">
+            <img class="insignia-card" src="img/certs/cysa.png" alt="Insignia CompTIA CySA+" width="150" height="150">
+            <span class="card-title">CompTIA CySA+</span>
+            <p class="proveedor">CompTIA</p>
+            <p>Análisis de amenazas y caza de incidentes.</p>
+            <div><span class="nivel-avanzado">Avanzado</span> <span class="chip">Blue Team</span></div>
+            <a class="ver-curso" href="cursos.html#soc2">Curso: SOC Nivel 2 →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card hoverable revela t-blue" id="gcih">
+          <div class="card-content">
+            <img class="insignia-card" src="img/certs/gcih.png" alt="Insignia GCIH" width="150" height="150">
+            <span class="card-title">GCIH</span>
+            <p class="proveedor">GIAC</p>
+            <p>Manejo de incidentes: detectar, contener y recuperar.</p>
+            <div><span class="nivel-avanzado">Avanzado</span> <span class="chip">Blue Team</span></div>
+            <a class="ver-curso" href="cursos.html#soc3">Curso: SOC Nivel 3 →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card hoverable revela t-blue" id="gcfa">
+          <div class="card-content">
+            <img class="insignia-card" src="img/certs/gcfa.png" alt="Insignia GCFA" width="150" height="150">
+            <span class="card-title">GCFA</span>
+            <p class="proveedor">GIAC</p>
+            <p>Forense de disco y memoria para reconstruir un ataque.</p>
+            <div><span class="nivel-avanzado">Avanzado</span> <span class="chip">Blue Team</span></div>
+            <a class="ver-curso" href="cursos.html#soc3">Curso: SOC Nivel 3 →</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div></section>
+<section>
+  <div class="contenedor"><div class="panel cta-caja revela"><h2>¿Cuál te conviene primero?</h2><p>El test de nivel te dice por dónde empezar.</p><a href="index.html#nivel" class="boton boton-claro">Conoce tu nivel</a></div></div>
+</section>
+</main>
+
+<footer class="pie-pagina">
+  <div class="contenedor">
+    <div class="cols">
+      <div><img class="logo-pie" src="img/logo.png" alt="NetPrep" width="140" height="140"><h4>NetPrep</h4><p>Preparación práctica en ciberseguridad: de los fundamentos al SOC o al Red Team.</p></div>
+      <div><h4>Rutas</h4><a href="cursos.html#fundamentos">Fundamentos</a><a href="cursos.html#blue">Blue Team</a><a href="cursos.html#red">Red Team</a></div>
+      <div><h4>Páginas</h4><a href="index.html#nivel">Conoce tu nivel</a><a href="cursos.html">Cursos</a><a href="ruta.html">Ruta de estudio</a><a href="certificaciones.html">Certificaciones</a><a href="laboratorios.html">Laboratorios</a><a href="contacto.html">Contacto</a></div>
+      <div><h4>Empieza</h4><a href="index.html#nivel">Conoce tu nivel</a><a href="contacto.html">Habla con un asesor</a></div>
+    </div>
+    <p class="legal">© 2026 NetPrep · Proyecto académico de Hojas de Estilo en Cascada Avanzado. Cursos, ejemplos y datos son ficticios. Todas las prácticas se hacen en laboratorios propios y con autorización. Las insignias de certificaciones pertenecen a sus respectivos dueños. eJPT, eCPPT y eWPTX (INE), OSCP (OffSec), CCNA y CyberOps (Cisco), Security+ y CySA+ (CompTIA), BTL1 (Security Blue Team), GCIH y GCFA (GIAC), LPI Linux Essentials (LPI), Nmap, Wireshark, Burp Suite, Metasploit, Bootstrap, Tailwind CSS y Materialize son marcas de sus dueños; este proyecto no está afiliado a ellas.</p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
